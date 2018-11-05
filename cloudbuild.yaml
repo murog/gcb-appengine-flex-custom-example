@@ -16,4 +16,4 @@ steps:
           'push',
           'gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA'
         ]
-  images: ['gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA']
+  image: ['gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA']
