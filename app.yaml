@@ -1,0 +1,28 @@
+# runtime tells app engine what sandbox you want your code in
+# since it is static content, it will work on any runtime
+# but lets run within nodejs8 (-:
+runtime: nodejs8
+
+# app engine deploys on compute engine instances
+# this tells it what size you want
+# F1 is the smallest and default size
+# you can increase this later if needed
+instance_class: F1
+
+# app engine will automatically create more instances 
+# to keep your app up if there is sudden high traffic
+# this makes sure app engine doesn't create more than
+# you're comfortable with
+automatic_scaling:
+  max_instances: 1
+
+# Handlers tell app engine how to handle certain url patterns
+# they can execute application code
+# or serve static files 
+handlers:
+- url: /
+  static_files: build/index.html
+  upload: build/index.html
+- url: /
+  static_dir: build
+
