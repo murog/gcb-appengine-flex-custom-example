@@ -4,10 +4,16 @@ steps:
 - name: 'gcr.io/cloud-builders/npm'
   # runs test in create-react-app without watch
   args: ['run', 'test', '--', '--coverage']
-# create production ready build
-- name: 'gcr.io/cloud-builders/npm'
-  args: ['run', 'build']
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['app', 'deploy']
-timeout: '1600s'
-
+- name: 'gcr.io/cloud-builders/docker'
+  args: [
+          'build',
+          '-t',
+          'gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA',
+          '.'
+        ]
+- name: 'gcr.io/cloud-builders/docker'
+  args: [
+          'push',
+          'gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA'
+        ]
+  images: ['gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA']
