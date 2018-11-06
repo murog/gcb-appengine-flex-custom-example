@@ -12,7 +12,7 @@ class App extends Component {
             Edit <code>src/App.js</code> and save to reload.
           </p>
 	  <p>
-	    This site is running on nginx!
+	    This site is running on nginx! And it has an images flag!
 	  </p>
           <a
             className="App-link"
