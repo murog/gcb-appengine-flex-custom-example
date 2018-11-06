@@ -11,6 +11,8 @@ steps:
           'gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA',
           '.'
         ]
+images:
+  - 'gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA'
 # - name: 'gcr.io/cloud-builders/docker'
 #   args: [
 #           'push',
@@ -23,5 +25,4 @@ steps:
           '--image-url=gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA'
         ]
 timeout: '1600s'
-images:
-- 'gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA'
+
