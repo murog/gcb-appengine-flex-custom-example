@@ -13,11 +13,6 @@ steps:
         ]
 images:
   - 'gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA'
-# - name: 'gcr.io/cloud-builders/docker'
-#   args: [
-#           'push',
-#           'gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA'
-#         ]
 - name: 'gcr.io/cloud-builders/gcloud'
   args: [
           'app',
