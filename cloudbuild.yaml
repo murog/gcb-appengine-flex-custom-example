@@ -23,4 +23,5 @@ steps:
           '--image-url=gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA'
         ]
 timeout: '1600s'
+images: ['gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA']
 
