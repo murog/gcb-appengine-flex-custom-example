@@ -12,7 +12,7 @@ class App extends Component {
             Edit <code>src/App.js</code> and save to reload.
           </p>
 	  <p>
-	    This site is running on nginx! And it doesn't have an image flag!
+	    This site is running on nginx and App Engine Flex! 
 	  </p>
           <a
             className="App-link"
