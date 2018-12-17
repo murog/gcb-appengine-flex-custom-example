@@ -12,7 +12,7 @@ class App extends Component {
             Edit <code>src/App.js</code> and save to reload.
           </p>
 	  <p>
-	    This site is running on nginx and App Engine Flex! 
+	    This site is running on nginx and App Engine Flex! This change will be ignored.
 	  </p>
           <a
             className="App-link"
