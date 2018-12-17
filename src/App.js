@@ -14,6 +14,7 @@ class App extends Component {
 	  <p>
 	    This site is running on nginx and App Engine Flex! This change is in Staging.
 	  </p>
+        <p> I want to move this to staging </p>
           <a
             className="App-link"
             href="https://reactjs.org"
